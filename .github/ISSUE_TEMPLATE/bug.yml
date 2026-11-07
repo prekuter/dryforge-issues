@@ -1,0 +1,60 @@
+name: Bug report
+description: Something in Dryforge does not work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues here are public. Do not include your code, file paths, prompts, chat content, tokens or passwords.
+        If the bug needs your code to reproduce, email contact@dryforge.dev instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Dryforge version
+      description: Settings › About
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: Operating system version
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics file
+      description: Export diagnostics from the app menu and attach the file. It holds versions, settings and error codes. It does not hold your code or chats.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched existing issues
+          required: true
+        - label: This report contains no code, file paths, chat content or secrets
+          required: true

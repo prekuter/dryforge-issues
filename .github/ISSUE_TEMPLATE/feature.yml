@@ -1,0 +1,25 @@
+name: Feature request
+description: Something you want Dryforge to do
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: Issues here are public. Do not include your code, file paths or secrets.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: The task or problem, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched existing issues
+          required: true
